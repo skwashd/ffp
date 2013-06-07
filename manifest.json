@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "FFP",
+  "description": "This extension removes the javascript based paywall on Fairfax's metropolitian news sites.",
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" 
+  },
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.theage.com.au/*"
+      ],
+      "run_at": "document_idle",
+      "js": ["ffp.js"]
+    },
+    {
+      "matches": [
+        "*://www.smh.com.au/*"
+     ],
+      "run_at": "document_idle",
+      "js": ["ffp.js"]
+    },
+    {
+      "matches": [
+        "*://www.brisbanetimes.com.au/*"
+      ],
+      "run_at": "document_idle",
+      "js": ["ffp.js"]
+    },
+    {
+      "matches": [
+        "*://www.watoday.com.au/*"
+      ],
+      "run_at": "document_idle",
+      "js": ["ffp.js"]
+    },
+    {
+      "matches": [
+        "*://www.canberratimes.com.au/*"
+      ],
+      "run_at": "document_idle",
+      "js": ["ffp.js"]
+    }
+  ]
+}
